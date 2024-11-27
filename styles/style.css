@@ -1,7 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  padding: var(--main-padding);
   color: var(--text-color);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-family: var(--font-family-base);
@@ -82,13 +81,15 @@
 .header {
   position: relative;
   display: grid;
-  grid-template-rows: 1fr min-content 1fr;
-  margin-block-end: 50px;
+  grid-template-rows: 1fr auto 1fr;
+  margin-block-end: 30px;
+  padding: var(--main-padding);
   block-size: 100vh;
   min-block-size: 668px;
 
   @media (width >= 768px) {
-    margin-block-end: 70px;
+    margin-block-end: 40px;
+    min-block-size: 768px;
   }
 }
 
@@ -111,13 +112,13 @@
 }
 
 .header.decorated-zone::before {
-  inset-inline-end: 0;
-  inset-block-start: 0;
+  inset-inline-end: var(--main-padding);
+  inset-block-start: var(--main-padding);
 }
 
 .header.decorated-zone::after {
-  inset-inline-start: 0;
-  inset-block-end: 0;
+  inset-inline-start: var(--main-padding);
+  inset-block-end: var(--main-padding);
 }
 
 .header__rec {
@@ -125,8 +126,8 @@
   display: none;
   color: var(--accent-color);
   text-transform: uppercase;
-  inset-inline-end: 0;
-  inset-block-start: 0;
+  inset-inline-end: var(--main-padding);
+  inset-block-start: var(--main-padding);
 }
 
 .theme_dark .header__rec {
@@ -258,6 +259,12 @@
   }
 }
 
+/* main */
+
+.main {
+  padding: var(--main-padding);
+}
+
 /* Почему */
 
 .reasons {
@@ -298,10 +305,10 @@
 /* Советы */
 
 .solutions {
-  margin-block-end: 50px;
+  margin-block-end: 40px;
 
   @media (width >= 768px) {
-    margin-block-end: 80px;
+    margin-block-end: 50px;
   }
 }
 
@@ -381,8 +388,13 @@
 .footer {
   position: relative;
   display: grid;
+  padding: var(--main-padding);
   block-size: 100vh;
   min-block-size: 667px;
+
+  @media (width >= 768px) {
+    min-block-size: 768px;
+  }
 }
 
 .footer__title {
@@ -405,13 +417,13 @@
 }
 
 .footer.decorated-zone::before {
-  inset-inline-end: 0;
-  inset-block-start: 0;
+  inset-inline-end: var(--main-padding);
+  inset-block-start: var(--main-padding);
 }
 
 .footer.decorated-zone::after {
-  inset-inline-start: 0;
-  inset-block-end: 0;
+  inset-inline-start: var(--main-padding);
+  inset-block-end: var(--main-padding);
 }
 
 /* Настройка галереи на экран пошире */
