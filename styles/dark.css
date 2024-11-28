@@ -10,9 +10,21 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --primary-heading-color: #DB00FF;
-  --text-color: #F1B2CE;
+  --main-text-color: #F1B2CE;
+  --heading-text-color: #000028;
   --background-color: #000028;
   --accent-color: #FF0070;
+  --shadow-color: #FF0070;
   --background-image: url('../images/cover-image-dark.png');
   --hover-color: rgba(255, 0, 112, 0.40);
+}
+
+.theme_dark .header__rec {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  .theme_auto .header__rec {
+    display: block;
+  }
 }

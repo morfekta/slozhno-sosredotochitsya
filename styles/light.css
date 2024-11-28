@@ -10,7 +10,8 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --primary-heading-color: #FFC2E6;
-  --text-color: #353430;
+  --main-text-color: #353430;
+  --heading-text-color: #353430;
   --background-color: #FFF1F7;
   --accent-color: #353430;
   --shadow-color: #FF8DCB;
@@ -21,7 +22,8 @@
 @media (prefers-color-scheme: light) {
   :root {
     --primary-heading-color: #FFC2E6;
-    --text-color: #353430;
+    --main-text-color: #353430;
+    --heading-text-color: #353430;
     --background-color: #FFF1F7;
     --accent-color: #353430;
     --shadow-color: #FF8DCB;
